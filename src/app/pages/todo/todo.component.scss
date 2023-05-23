@@ -1,0 +1,53 @@
+.Form-container{
+    background-size: cover;
+   
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    
+    background-color: #333a5a;
+   
+}
+.Form-container1{
+    background-size: cover;
+   min-height: 90vh;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.example-checkbox{
+    color: blue;
+    
+}
+h1{
+    color: #fff;
+    margin-bottom: 60px;
+    
+}
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+// button{
+//     background-color: blue !important;
+//     color: #fff !important;
+//     border: 0px;
+//     border-radius: 8px;
+// }
+// // .radio{
+//     color: black!important;
+// }
+// .mat-mdc-radio-button.mat-accent {
+//     --mdc-radio-unselected-icon-color: black !important;
+//     --mdc-radio-selected-icon-color:rgba(58, 23, 214, 0.54)!important
+// }
+// .mat-mdc-radio-button .mdc-form-field {
+//      color: var(--mdc-theme-text-primary-on-background, black) !important; 
+// }
+// label{
+//     color: black !important;
+// }
+// .mat-mdc-radio-button .mdc-form-field {
+//     color: black !important;
+// }

@@ -1,0 +1,19 @@
+button{
+    background-color: transparent;
+    border: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+    
+}
+.mat-toolbar .mat-mdc-button-base.mat-unthemed.active-link {
+    color: blue !important;
+}
+.demo-section + .demo-section {
+    margin-top: 30px;
+  }
+  @media print {
+    .nav-card{
+        display: none !important;
+    }
+  }

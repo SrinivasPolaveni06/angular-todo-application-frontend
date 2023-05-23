@@ -1,0 +1,195 @@
+<div class="Form-container1" fxLayout="column" fxLayoutAlign="center center">
+  <div class="Form-container" style="width: 40%">
+    <h1>User Form</h1>
+    <form
+      class="example-form"
+      fxLayout="column"
+      fxLayoutAlign="start start"
+      [formGroup]="userForm"
+      (ngSubmit)="onSubmit($event)"
+    >
+      <mat-form-field class="example-full-width" fxFlexFill>
+        <mat-label>Username</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="name"
+          placeholder="Enter Username"
+        />
+        <mat-error
+          *ngIf="
+          userForm.get('name')?.errors?.['required']"
+        >
+          Username Required
+        </mat-error>
+        <mat-error
+          *ngIf="
+          userForm.get('name')?.errors?.['minlength']"
+        >
+          Username should be more Than 5 Characters
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field class="example-full-width" fxFlexFill>
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          [formControl]="emailFormControl"
+          [errorStateMatcher]="matcher"
+          placeholder="Ex. pat@example.com"
+        />
+
+        <mat-error
+          *ngIf="
+            emailFormControl.hasError('email') &&
+            !emailFormControl.hasError('required')
+          "
+        >
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" fxFlexFill>
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          matInput
+          formControlName="password"
+          placeholder="Enter Password"
+        />
+        <mat-error
+          *ngIf="
+          userForm.get('password')?.errors?.['required']"
+        >
+          Password Required
+        </mat-error>
+        <mat-error
+          *ngIf="
+          userForm.get('password')?.errors?.['minlength']"
+        >
+          Password should be more Than 8 Characters
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <!-- <mat-form-field appearance="fill" fxFlexFill>
+        <mat-label>Choose a date</mat-label>
+        <input
+          class="input-style"
+          matInput
+          [matDatepicker]="picker"
+          formControlName="date"
+        />
+
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error
+          *ngIf="
+              todoForm.get('date')?.errors?.['required']"
+        >
+          Date Required
+        </mat-error>
+      </mat-form-field> -->
+      <mat-radio-group aria-label="Select an option" formControlName="gender">
+        <mat-radio-button
+          name="completed"
+          class="radio"
+          value="male"
+          matInput
+          [checked]="Incompleted"
+          (change)="changeGender($event)"
+          >Male</mat-radio-button
+        >
+        <mat-radio-button
+          class="radio"
+          value="female"
+          name="completed"
+          [checked]="Done1"
+          matInput
+          (change)="changeGender($event)"
+          >Female</mat-radio-button
+        >
+        <!-- <div
+          *ngIf="f.completed.touched && f.completed.invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="['f.completed.errors.required']">Name is required.</div>
+        </div> -->
+      </mat-radio-group>
+
+      <br />
+
+      <!-- <mat-form-field
+        class="example-full-width"
+        formControlName="select"
+        fxFlexFill
+      >
+        <mat-checkbox class="example-margin" formControlName="select" value="Selected1"
+          >Check me!</mat-checkbox
+        >
+        <mat-checkbox class="example-margin" formControlName="select" value="Selected2"
+          >Leave me!</mat-checkbox
+        >
+      </mat-form-field> -->
+
+      <mat-form-field class="example-full-width" fxFlexFill>
+        <input matInput placeholder="mobile" formControlName="mobile" />
+        <mat-error
+          *ngIf="
+          userForm.get('mobile')?.errors?.['required']"
+        >
+          Mobile Required
+        </mat-error>
+        <mat-error
+          *ngIf="
+          userForm.get('mobile')?.errors?.['minlength']"
+        >
+          Mobile should be min and max 10 Characters
+        </mat-error>
+        <mat-error
+          *ngIf="
+          userForm.get('mobile')?.errors?.['maxlength']"
+        >
+          Mobile should be min and max 10 Characters
+        </mat-error>
+        <!-- <mat-error
+          *ngIf="
+              todoForm.get('mobile')?.errors?.['minlength']"
+        >
+          Mobile should be maximum 10 Characters
+        </mat-error> -->
+      </mat-form-field>
+
+      <section
+        class="example-section mb-3"
+        [formGroup]="technologies"
+        fxLayout="column"
+        fxLayoutAlign="start start"
+        fxFlexFill
+      >
+        <h4 class="text-white ms-0">Skills:</h4>
+        <div>
+          <mat-checkbox formControlName="Html">Html</mat-checkbox>
+          <mat-checkbox formControlName="CSS">CSS</mat-checkbox>
+          <mat-checkbox formControlName="Javascript">Javascript</mat-checkbox>
+        </div>
+      </section>
+      <mat-form-field appearance="fill" fxFlexFill>
+        <mat-label>Select an City</mat-label>
+        <mat-select [(value)]="selected" formControlName="city">
+          <mat-option>None</mat-option>
+          <mat-option value="Hyderabad">Hyderabad</mat-option>
+          <mat-option value="Karimnagar">Karimnagar</mat-option>
+          <mat-option value="Peddapalli">Peddapalli</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="accent">Submit</button>
+    </form>
+  </div>
+</div>

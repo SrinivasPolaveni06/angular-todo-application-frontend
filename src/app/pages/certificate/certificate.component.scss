@@ -1,0 +1,187 @@
+.main-container{
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.certifiacte-container{
+    background-color: white ;
+    // border: 8px solid #EC7063 ;
+    position: relative;
+    // border-left-color: #614b3c ;
+    // border-top-color: #513f21;
+    // border-bottom-color: #614b3c ;
+    // border-right-color: #513f21;
+     border-image: linear-gradient( #B84C04,#f6b73c) 30;
+   border-width: 8px;
+   border-style: solid;
+    
+}
+.styled-Component{
+    border: 50px solid transparent ;
+    width: 0;
+    height: 0;
+    position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+    //  border-top-color: rgb(63,48,26) !important;
+    //  border-left-color: rgb(63,48,26) !important;
+    border-top-color: #ed6e1b !important;
+    border-left-color: #ed6e1b !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.styled-Component1{
+    border: 50px solid transparent ;
+    width: 0;
+    height: 0;
+    position: absolute;
+   right: 0px;
+   bottom: 0px;
+  z-index: 1;
+    border-bottom-color: #ed6e1b !important;
+    border-right-color:#ed6e1b !important;
+    // border-bottom-color: rgb(63,48,26) !important;
+    // border-right-color: rgb(63,48,26) !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.certifiacte-card1{
+    border: 3px solid #F4D03F  ;
+    padding: 15px;
+    z-index: 2;
+    
+    position: relative;
+  
+    margin: 20px;
+}
+.Certificate{
+    font-size: 40px;
+    font-family: Georgia, italic ;
+    
+    color: #273746;
+    
+}
+.APPRECIATION{
+    font-size: 20px;
+    font-family: Georgia,serif;
+    color: #B84C04 ;
+    
+}
+.hr-line{
+    color: #000;
+    border: none;
+    background-color: #0c0b0b;
+    height: 2px;
+    width: 200px;
+}
+.Following{
+    font-size: 20px;
+    font-family: italic;
+    
+}
+.hr-line1{
+   border: 0;
+   border-top: 3px solid #ed6e1b;
+// border-top: 2px solid #513f21;
+    height: 1px;
+    width: 350px;
+    //width: 400px;
+    display: block;
+  
+}
+.title{
+    
+  font-family: 'sans-serif', 'italic';
+
+    font-weight: 900;
+    font-size: 25px;
+
+  
+  
+}
+.motivity{
+    color: #ed6e1b;
+    font-family: italic;
+    font-weight: 700;
+}
+.certificate-paragraph{
+    font-size: 15px;
+    font-family: italic;
+}
+.title2{
+    font-size: 15px;
+    font-family: Georgia, italic ;
+    
+}
+.hr-line2{
+//     border: 1px solid #B84C04;
+   
+//     border-width: 1.6px;
+//     width: 150px;
+//     color: #B84C04;
+    
+//   background-color: #B84C04;
+border-top: 1.5px solid #513f21;
+   
+    // border-width: 1.6px;
+    
+    width: 150px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+//     color: #B84C04;
+    
+//   background-color: #B84C04;
+}
+.Mentor{
+    color: #B84C04 ;
+    font-family: italic;
+    font-size: 16px;
+}
+.title3{
+    font-size: 14px;
+    font-family: Georgia, serif ;
+    font-weight: 600;
+    
+}
+
+.date-text{
+    font-size: 15px;
+    font-weight: 500;
+
+}
+.date{
+    font-weight: 500;
+    font-size: 17px;
+}
+.download-btn{
+    background-color:#ed6e1b !important;
+    color: #fff !important;
+    border: 0px;
+    border-radius: 6px;
+}
+.form-container1{
+    
+    min-height: 100vh;
+    //background-color: #19162f;
+    background-color:#EAF1F1 ;
+    
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+@media print {
+    .noPrintCard{
+        display: none !important;
+    }
+    .download-btn{
+        display: none !important;
+        background-color:#ed6e1b ;
+        color: #fff;
+        border: 0px;
+        border-radius: 6px;
+    }
+}

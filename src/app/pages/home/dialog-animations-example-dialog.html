@@ -1,0 +1,10 @@
+<div class="modal-card">
+  <h1 mat-dialog-title>Confirmation Message</h1>
+  <div mat-dialog-content>Are you sure, You want delete this todo task..</div>
+  <div mat-dialog-actions class="button-card">
+    <button mat-button mat-dialog-close class="cancel" (click)="onClose()">
+      No
+    </button>
+    <button mat-button (click)="onDelete()" class="success">Ok</button>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<mat-toolbar
+  color="accent"
+  fxLayout="row"
+  fxLayoutAlign=" center"
+  class="nav-card"
+>
+  <div>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+  </div>
+
+  <div class="ms-auto me-4">
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+      routerLink="/"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <!-- <mat-icon>Home</mat-icon> -->
+      Home
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon demo-section"
+      aria-label="Example icon-button with share icon"
+      routerLink="/todo"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [matBadge]="srv.todosCount"
+      matBadgeOverlap="false"
+    >
+      <!-- <mat-icon>Todo</mat-icon> -->
+      Todo
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      routerLink="/form"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <!-- <mat-icon>Todo</mat-icon> -->
+      Form
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      routerLink="/certificate"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <!-- <mat-icon>Todo</mat-icon> -->
+      Cetrificate
+    </button>
+  </div>
+</mat-toolbar>

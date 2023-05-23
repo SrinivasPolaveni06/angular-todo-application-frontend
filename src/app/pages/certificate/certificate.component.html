@@ -1,0 +1,173 @@
+<div class="container-fluied">
+  <div class="row main-container">
+    <div class="col-12 col-lg-4 noPrintCard">
+      <div class="form-container1 p-3 shadow">
+        <div class="d-flex justify-content-end">
+          <img
+            src="https://cdn.newswire.com/files/x/0e/0c/b75e294752cc7989ee265d037f5d.png"
+            alt="logo"
+            width="100px"
+          />
+        </div>
+
+        <h1 class="text-center motivity">Certificate Form</h1>
+
+        <div class="d-flex justify-content-center">
+          <mat-form-field
+            style="width: 80%"
+            appearance="fill"
+            class="m-2 input-card1"
+          >
+            <mat-label>First Name</mat-label>
+            <input matInput [(ngModel)]="Person.title" />
+          </mat-form-field>
+        </div>
+        <div class="d-flex justify-content-center">
+          <mat-form-field style="width: 80%" appearance="fill" class="m-2">
+            <mat-label>Last Name</mat-label>
+            <input matInput [(ngModel)]="Person.lastname" />
+          </mat-form-field>
+        </div>
+        <div class="d-flex justify-content-center">
+          <mat-form-field style="width: 80%" appearance="fill" class="m-2">
+            <mat-label>Gender</mat-label>
+            <input matInput [(ngModel)]="Person.gender" />
+          </mat-form-field>
+        </div>
+        <div class="d-flex justify-content-center">
+          <mat-form-field style="width: 80%" appearance="fill" class="m-2">
+            <mat-label>Feild</mat-label>
+            <input matInput [(ngModel)]="Person.feild" />
+          </mat-form-field>
+        </div>
+        <div class="d-flex justify-content-center">
+          <mat-form-field style="width: 80%" appearance="fill" class="m-2">
+            <mat-label>Head of Department</mat-label>
+            <input matInput [(ngModel)]="Person.head" />
+          </mat-form-field>
+        </div>
+        <div class="d-flex justify-content-center">
+          <mat-form-field style="width: 80%" appearance="fill" class="m-2">
+            <mat-label>Mentor</mat-label>
+            <input matInput [(ngModel)]="Person.mentor" />
+          </mat-form-field>
+        </div>
+        <div class="d-flex justify-content-center">
+          <mat-form-field style="width: 80%" appearance="fill">
+            <mat-label>Choose a date</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              [(ngModel)]="Person.date"
+            />
+
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 col-lg-8 d-flex justify-content-center align-items-center"
+    >
+      <div>
+        <div class="certifiacte-container">
+          <div class="styled-Component"></div>
+
+          <div class="certifiacte-card1 p-3 text-center">
+            <div class="d-flex justify-content-end align-items-center mb-2">
+              <img
+                src="https://cdn.newswire.com/files/x/0e/0c/b75e294752cc7989ee265d037f5d.png"
+                alt="logo"
+                width="150px"
+                class="ms-3"
+              />
+              <!-- <img
+                src="https://www.accelalpha.com/assets/images/template/logo.jpg"
+                alt="logo"
+                width="130px"
+                class="ms-3"
+              /> -->
+            </div>
+
+            <h1 class="Certificate">CERTIFICATE</h1>
+            <h2 class="APPRECIATION pb-0 mb-0">OF APPRECIATION</h2>
+            <div class="d-flex justify-content-center pt-0 mt-0">
+              <hr class="hr-line" />
+            </div>
+
+            <p class="Following">The Following Award Is Given to</p>
+            <div>
+              <div class="d-flex flex-column align-items-center">
+                <h3 class="title mb-0 pb-0 mt-3">
+                  {{ Person.title | uppercase }}
+                  {{ Person.lastname | uppercase }}
+                </h3>
+                <hr class="hr-line1 mt-1" />
+              </div>
+            </div>
+            <p class="certificate-paragraph">
+              This certificate is given to
+              <span class="title2">{{ Person.title | uppercase }}</span>
+            </p>
+            <p class="certificate-paragraph">
+              for
+              <span class="title2">{{
+                Person.gender.toLowerCase() === "female" ? "her" : "his"
+              }}</span>
+              achievement in the field of {{ Person.feild }} and proves that
+              <span class="title2">{{
+                Person.gender.toLowerCase() === "female" ? "she" : "he"
+              }}</span>
+              is competent in
+              <span class="title2">{{
+                Person.gender.toLowerCase() === "female" ? "her" : "his"
+              }}</span>
+              field.
+            </p>
+            <div class="d-flex justify-content-around pt-3">
+              <div class="mt-5">
+                <hr class="hr-line2" />
+                <p class="title3 py-0 my-1">{{ Person.head | uppercase }}</p>
+                <p class="Mentor pt-0 mt-1">Head of Events</p>
+              </div>
+              <div>
+                <img
+                  src="https://www.clipartmax.com/png/full/272-2720419_gallery-for-simple-laurel-wreath-clipart-laurel-wreath-gold-png.png"
+                  width="160px"
+                />
+              </div>
+
+              <div class="mt-5">
+                <hr class="hr-line2" />
+                <p class="title3 py-0 my-1">{{ Person.mentor | uppercase }}</p>
+                <p class="Mentor pt-0 mt-1">Mentor</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-start pt-3 ms-3">
+              <p class="date-text">
+                Issued on:
+                <span class="date">{{
+                  Person.date | date : "dd-MM-yyyy"
+                }}</span>
+              </p>
+            </div>
+          </div>
+          <div class="styled-Component1"></div>
+        </div>
+        <div class="text-center">
+          <button
+            mat-raised-button
+            class="mt-3 download-btn"
+            (click)="onDownload()"
+          >
+            Download
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
